@@ -28,5 +28,7 @@ Route::get('/', 'PagesController@index');
 Route::get('/about', 'PagesController@about');
 Route::get('/services', 'PagesController@services');
 
-Route::ressource('posts', 'PostsController');
-
+Route::resource('posts', 'PostController');
+Route::post("/post/store", "PostController@store")->name('storePost');
+Route::post("/post/update/{id}", "PostController@update")->name('updatePost');
+Route::post('/post/destroy/{id}', 'PostController@destroy')->name('delete¶ost');
