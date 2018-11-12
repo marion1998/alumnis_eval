@@ -32,3 +32,6 @@ Route::resource('posts', 'PostController');
 Route::post("/post/store", "PostController@store")->name('storePost');
 Route::post("/post/update/{id}", "PostController@update")->name('updatePost');
 Route::post('/post/destroy/{id}', 'PostController@destroy')->name('delete¶ost');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
